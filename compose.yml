@@ -1,3 +1,4 @@
+
 version: '3.8'
 
 services:
@@ -17,6 +18,10 @@ services:
       - "27017:27017"
     volumes:
       - mongo-data:/data/db
+      - ./mongod.conf:/etc/mongod.conf
+      - ./logs:/var/log/mongodb
+    command: ["mongod", "--config", "/etc/mongod.conf"]
 
 volumes:
   mongo-data:
+  logs:
