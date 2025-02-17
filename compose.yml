@@ -4,7 +4,7 @@ services:
   app:
     build: .
     ports:
-      - "8080:8080"
+      - "8081:8081"
     depends_on:
       - mongo
     environment:
@@ -12,7 +12,7 @@ services:
       MONGO_DB: mydb
 
   mongo:
-    image: mongo:latest
+    image: mongo:4.4
     ports:
       - "27017:27017"
     volumes:

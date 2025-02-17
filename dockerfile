@@ -13,5 +13,5 @@ RUN chmod +x /usr/src/app/target/release/actix
 # Comando para iniciar o servidor
 CMD ["cargo", "run", "--release"]
 
-# Expor a porta 8080
-EXPOSE 8080
+# Expor a porta 8081
+EXPOSE 8081
