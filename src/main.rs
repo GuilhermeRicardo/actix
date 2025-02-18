@@ -28,7 +28,7 @@ async fn main() -> std::io::Result<()> {
             .configure(handlers::routes::config)
     })
     .workers(8) // Número de workers
-    .bind("0.0.0.0:8081")?
+    .bind("127.0.0.0:8081")?
     .run()
     .await
 }
